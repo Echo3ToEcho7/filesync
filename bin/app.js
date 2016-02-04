@@ -467,7 +467,7 @@ function getSncClient(root) {
     if (!host._client) {
         host._logger = logit;
         host.debug = config.debug;
-        host._client = sncClient(host);
+        host._client = new sncClient(host);
     }
     return host._client;
 }
